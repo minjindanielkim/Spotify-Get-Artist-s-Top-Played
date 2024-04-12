@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div>
+
+<form action="{{ url_for("artists") }}" method="post">
+    <label for="artistName">Enter an artist's name: </label>
+    <input type="text" id="artistName" name="fname" placeholder="enter artist name">
+    <label for="location">Enter a two letter country code: </label>
+    <input type="text" id="location" name="locate" placeholder="enter two letter country code">
+    <button type="submit">Submits</button>
+
+</div>
+{% endblock %}

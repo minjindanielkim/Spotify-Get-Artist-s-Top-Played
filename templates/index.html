@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show Artist Top Songs</title>
+    </head>
+    <style>
+        div {
+            margin-top: 13px;
+        }
+    </style>
+    <body>
+        <h2> Display Top 10 Most Popular Songs </h2>
+        <!-- <a href="{{ url_for('home') }}">Home</a> -->
+        <a href="{{ url_for('index') }}">Index</a>
+        <a href="{{ url_for('artists') }}">Top Songs From an Artist</a>
+        {% block body %}
+
+        <p>
+            This program recieves two input fields. <br>
+            One is the name of the artist that the user wishes <br>            
+            to search, and the other is a two digit country name, where it <br>
+            will show results on the popular songs of said artist in a specified country. 
+            Click on "Top Songs From an Artist" to get started.
+        </p>
+        
+        {% endblock %}
+    </body>
+</html>
