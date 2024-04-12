@@ -79,12 +79,12 @@ def artists():
         songs = get_songs_by_artist(token, artist_id, locationID)
 
         popularSongs = {}
-        for i, song in enumerate(songs):
+        for index, song in enumerate(songs):
             popularSongs[f"{song['name']}"] = f"{song['popularity']}"
 
         return render_template("results.html", popularSongs=popularSongs)
 
     return render_template("top.html") 
 
-if __name__ == "__main__":
+if __name__ == "__main__":      
     app.run()
